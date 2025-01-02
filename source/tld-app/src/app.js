@@ -21,6 +21,12 @@ app.get('/', (req, res) => {
     res.render('index.twig', {title: 'Welcome', message: 'Hello, Nunjucks!'});
 });
 
+// 404 Not Found handler for all routes that don't match
+app.use((req, res) => {
+    // Set 404
+    res.status(404).render('404.twig');
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
