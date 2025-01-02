@@ -1,6 +1,7 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require("path");
+const fs = require("fs");
 
 const app = express();
 const port = 2025;
@@ -18,7 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index.twig', {title: 'Welcome', message: 'Hello, Nunjucks!'});
+    const threadsJson = path.join(__dirname, 'data/threads.json');
+    const threads = JSON.parse(fs.readFileSync(threadsJson, 'utf8'));
+    res.render('index.twig', {threads: threads});
 });
 
 // 404 Not Found handler for all routes that don't match

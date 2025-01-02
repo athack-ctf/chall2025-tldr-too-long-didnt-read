@@ -1,0 +1,19 @@
+[
+  {
+    "title": "The Technical Details Behind TL;D",
+    "comments": [
+      {
+        "username": "GuestUser",
+        "isStaff": false,
+        "role": "nobody",
+        "text": "Can tech staff comment on how TL.D was built?"
+      },
+      {
+        "username": "John Doe",
+        "isStaff": true,
+        "role": "Technical Staff",
+        "text": "TL;D was built using a modern tech stack including React for the frontend, Node.js for the backend, and MongoDB for data storage. We focused on scalability and performance."
+      }
+    ]
+  }
+]

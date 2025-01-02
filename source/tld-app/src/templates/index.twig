@@ -30,30 +30,14 @@
     </div>
     <h2><b>Forum</b> - Hot Threads🔥🧵</h2>
     <div class="forum">
-        <h3>Thread: The Technical Details Behind TL;D</h3>
-        <div class="post">
-            <p><strong>John Doe (Technical Staff)</strong>: TL;D was built using a modern tech stack including React for
-                the frontend, Node.js for the backend, and MongoDB for data storage. We focused on scalability and
-                performance.</p>
-        </div>
-
-        <div class="post">
-            <p><strong>Jane Smith (Developer)</strong>: Our team integrated continuous deployment practices, using
-                GitLab CI/CD pipelines for automated testing and deployment. We also used Docker to containerize our
-                services.</p>
-        </div>
-
-        <div class="post">
-            <p><strong>Mike Johnson (DevOps)</strong>: We used AWS for hosting the application, including EC2 instances
-                for the backend and S3 for static assets. We also leverage CloudWatch for monitoring the application.
-            </p>
-        </div>
-
-        <div class="post">
-            <p><strong>Emily Taylor (Frontend Developer)</strong>: The frontend is built with React and
-                styled-components for a component-based architecture. We use Redux for state management across the
-                application.</p>
-        </div>
+        {% for thread in threads %}
+            <h3>Thread: {{ thread.title }}</h3>
+            {% for comment in thread.comments %}
+                <div class="post" {% if comment.isStaff == true %} title="Staff Member!" {% endif %}>
+                    <p><strong>{{ comment.username }} ({{ comment.role }})</strong>: {{ comment.text }}</p>
+                </div>
+            {% endfor %}
+        {% endfor %}
     </div>
 </div>
 
