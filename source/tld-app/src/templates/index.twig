@@ -17,12 +17,19 @@
 </header>
 <div class="content">
     {% if isLoggedIn == true %}
-        <h2><b>Logged in as:</b> {# TODO #}</h2>
+        <div class="top-section">
+            <h3><b>Logged in as:</b> {{ user.username }}</h3>
+            <div class="top-container">
+                <form id="logout-form" class="logout-form" action="/api/logout" method="POST">
+                    <button type="submit" class="btn">Logout</button>
+                </form>
+            </div>
+        </div>
     {% else %}
         <div class="top-section">
             <h3>Login to your TL;D Account</h3>
             <div class="top-container">
-                <form class="login-form" action="/login" method="POST">
+                <form id="login-form" class="login-form" action="/api/login" method="POST">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
                     <label for="password">Password:</label>
@@ -46,5 +53,45 @@
         {% endfor %}
     </div>
 </div>
+{% if isLoggedIn == true %}
+    <script>
+        document.getElementById('logout-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const response = await fetch('/api/logout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const result = await response.json();
+            if (result.success) {
+                window.location.reload();
+            } else {
+                alert(result.message);
+            }
+        });
+    </script>
+{% else %}
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({username, password}),
+            });
+            const result = await response.json();
+            if (result.success) {
+                window.location.reload();
+            } else {
+                alert(result.message);
+            }
+        });
+    </script>
+{% endif %}
 </body>
 </html>
