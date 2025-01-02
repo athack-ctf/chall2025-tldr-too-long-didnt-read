@@ -1,10 +1,13 @@
-# Running Your Challenge
+# TL;DR. chall
 
-Place all the code needed to run your challenge in this directory, and document the required environment as described
-below:
+- This chall consists of a node express app implemented in `tldr-app`.
+- The script [tldr-scripts/add-credentials.js](./tldr-scripts/add-credentials.js)
+  generates [tldr-app/src/data/credentials.json](./tldr-app/src/data/credentials.json)
+  form [tldr-scripts/data/accounts.json](./tldr-scripts/data/accounts.json). Make sure to run it if accounts.json is
+  changed.
 
-- If you have included a `Dockerfile` and a `docker-compose.yml`, then that is all that should be enough (unless additional
-  explanations are needed as well).
-- If you have not, please document the steps to create a runnable instance of your challenge, as we (Anis and Hugo)
-  will refer to this when adding the `Dockerfile` and `docker-compose.yml`
-- For any clarifications, consult us (Anis and Hugo).
+## Run [tldr-app](./tldr-app/) using docker-compose
+
+```
+docker compose up --build
+```
