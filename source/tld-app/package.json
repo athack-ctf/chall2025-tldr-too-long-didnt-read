@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "add-creds": "node data-utils/add-credentials.js"
   },
-  "author": "AnixPasBesoin",
+  "author": "Anis",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "nodemon": "^3.1.9",

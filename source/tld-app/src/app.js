@@ -3,6 +3,7 @@ const session = require('express-session');
 const nunjucks = require('nunjucks');
 const path = require("path");
 const fs = require("fs");
+const bcrypt = require("bcrypt");
 
 const app = express();
 const port = 2025;
@@ -30,14 +31,41 @@ app.use(session({
     cookie: {secure: false} // Use true if you're using https
 }));
 
+// Get all saved credentials
+const getAllCredentials = () => {
+    // Fetching credentials
+    const credentialsJson = path.join(__dirname, 'data/credentials.json');
+    return JSON.parse(fs.readFileSync(credentialsJson, 'utf8'));
+}
+
+const getAllThreads = () => {
+    const allCreds = getAllCredentials();
+    const threadsJson = path.join(__dirname, 'data/threads.json');
+    const rawThreads = JSON.parse(fs.readFileSync(threadsJson, 'utf8'));
+    const threads = rawThreads.map(rt => {
+        const t = rt;
+        t.comments = rt.comments.map(rc => {
+            const idx = rc.userIdx;
+            const username = allCreds[idx % allCreds.length].username;
+            const role = allCreds[idx % allCreds.length].role;
+            return {
+                username: username,
+                role: role,
+                text: rc.text,
+            }
+        })
+        return t;
+    });
+
+    return threads;
+}
+
 // Routes
 app.get('/', (req, res) => {
-    const threadsJson = path.join(__dirname, 'data/threads.json');
-    const threads = JSON.parse(fs.readFileSync(threadsJson, 'utf8'));
     res.render('index.twig', {
         isLoggedIn: !!req.session.user,
         user: req.session.user,
-        threads: threads
+        threads: getAllThreads(),
     });
 });
 
@@ -51,30 +79,40 @@ app.get('/flag', (req, res) => {
 });
 
 // API login route
-app.post('/api/login', (req, res) => {
+app.post('/api/login', async (req, res) => {
     const {username, password} = req.body;
 
     // Validate that username and password are non-empty strings
     if (typeof username !== 'string' || username === '') {
-        return res.json({success: false, message: 'Username must be a non-empty string.'});
+        return res.json({success: false, message: 'Login Failed: Username must be a non-empty string.'});
+    }
+
+    if (username.length < 4) {
+        return res.json({success: false, message: 'Login Failed: This username is too short!'});
     }
 
     if (typeof password !== 'string' || password === '') {
-        return res.json({success: false, message: 'Password must be a non-empty string.'});
+        return res.json({success: false, message: 'Login Failed: Password must be a non-empty string.'});
     }
 
-    // FIXME: Replace hardcoded authentication with a bcrypt-based one
-    const validUsername = 'admin';
-    const validPassword = 'password123';
+    if (password.length < 12) {
+        return res.json({success: false, message: 'Login Failed: This password is too short!'});
+    }
+
+    // Find the user by username
+    const user = getAllCredentials().find(user => user.username === username);
+
+    // Constructing username with password
+    const usernameWithPassword = `${user.username}${password}`;
 
     // Check if credentials are valid
-    if (username === validUsername && password === validPassword) {
+    if (!user || (await bcrypt.compare(usernameWithPassword, user.password))) {
         // Store session data
         req.session.user = {username: username};
         return res.json({success: true, message: 'Login successful!'});
     }
 
-    return res.json({success: false, message: 'Invalid credentials.'});
+    return res.json({success: false, message: 'Login Failed: Invalid credentials.'});
 });
 
 // API logout route

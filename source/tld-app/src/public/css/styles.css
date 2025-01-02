@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #1b1a40;
+    color: #F5DC38;
     padding: 1rem;
     text-align: center;
 }
@@ -17,7 +17,7 @@ header {
     margin: 20px auto;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #4440A0;
 }
 
 .centered {
@@ -25,7 +25,7 @@ header {
 }
 
 h2 {
-    color: #333;
+    color: #1b1a40;
 }
 
 .forum {
@@ -41,14 +41,14 @@ h2 {
 .forum p {
     background-color: #f9f9f9;
     padding: 10px;
-    border-left: 3px solid #333;
+    border-left: 3px solid #1b1a40;
 }
 
 .top-section {
-    background-color: #eee;
+    background-color: #cac8e9;
     padding: 20px;
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #a6a4db;
 }
 
 .top-section h3 {
@@ -65,14 +65,14 @@ input[type="text"], input[type="password"] {
 
 .btn {
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #1b1a40;
+    color: #F5DC38;
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: #4440A0;
 }
 
 .top-container {

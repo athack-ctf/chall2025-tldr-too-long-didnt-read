@@ -46,7 +46,7 @@
         {% for thread in threads %}
             <h3>Thread: {{ thread.title }}</h3>
             {% for comment in thread.comments %}
-                <div class="post" {% if comment.isStaff == true %} title="Staff Member!" {% endif %}>
+                <div class="post">
                     <p><strong>{{ comment.username }} ({{ comment.role }})</strong>: {{ comment.text }}</p>
                 </div>
             {% endfor %}
