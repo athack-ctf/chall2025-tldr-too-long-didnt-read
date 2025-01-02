@@ -4,11 +4,19 @@ const nunjucks = require('nunjucks');
 const path = require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
+const {Mutex} = require("async-mutex"); // Adjust path as needed
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Express App
+// ---------------------------------------------------------------------------------------------------------------------
 
 const app = express();
 const port = 2025;
 
+// ---------------------------------------------------------------------------------------------------------------------
 // Configure Nunjucks
+// ---------------------------------------------------------------------------------------------------------------------
+
 nunjucks.configure(path.join(__dirname, 'templates'), {
     autoescape: true,
     express: app,
@@ -16,11 +24,15 @@ nunjucks.configure(path.join(__dirname, 'templates'), {
     watch: true,
 });
 
-// Middleware to parse incoming JSON request body
-app.use(express.json());
+// ---------------------------------------------------------------------------------------------------------------------
+// Middlewares
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware to parse incoming JSON request body
+app.use(express.json());
 
 // Middleware to manage sessions
 app.use(session({
@@ -30,6 +42,28 @@ app.use(session({
     saveUninitialized: true,
     cookie: {secure: false} // Use true if you're using https
 }));
+
+// Middleware for locking a route
+// Create a global mutex instance
+const globalMutex = new Mutex();
+
+// Global lock middleware
+async function globalLockMiddleware(req, res, next) {
+    const release = await globalMutex.acquire(); // Acquire the global lock
+    res.on('finish', async () => {
+        // Delay request execution by 1 second
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        release(); // Release the lock when the response finishes
+    });
+    next(); // Continue processing the request
+}
+
+// Apply the global lock middleware for all routes
+app.use(globalLockMiddleware);
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Data Access
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Get all saved credentials
 const getAllCredentials = () => {
@@ -42,7 +76,7 @@ const getAllThreads = () => {
     const allCreds = getAllCredentials();
     const threadsJson = path.join(__dirname, 'data/threads.json');
     const rawThreads = JSON.parse(fs.readFileSync(threadsJson, 'utf8'));
-    const threads = rawThreads.map(rt => {
+    return rawThreads.map(rt => {
         const t = rt;
         t.comments = rt.comments.map(rc => {
             const idx = rc.userIdx;
@@ -56,11 +90,12 @@ const getAllThreads = () => {
         })
         return t;
     });
-
-    return threads;
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
 // Routes
+// ---------------------------------------------------------------------------------------------------------------------
+
 app.get('/', (req, res) => {
     res.render('index.twig', {
         isLoggedIn: !!req.session.user,
@@ -69,8 +104,6 @@ app.get('/', (req, res) => {
     });
 });
 
-
-// Flag
 app.get('/flag', (req, res) => {
     res.render('flag.twig', {
         isLoggedIn: !!req.session.user,
@@ -78,7 +111,6 @@ app.get('/flag', (req, res) => {
     });
 });
 
-// API login route
 app.post('/api/login', async (req, res) => {
     const {username, password} = req.body;
 
@@ -115,7 +147,6 @@ app.post('/api/login', async (req, res) => {
     return res.json({success: false, message: 'Login Failed: Invalid credentials.'});
 });
 
-// API logout route
 app.post('/api/logout', (req, res) => {
     req.session.destroy((err) => {
         if (err) {
@@ -125,14 +156,16 @@ app.post('/api/logout', (req, res) => {
     });
 });
 
-
 // 404 Not Found handler for all routes that don't match
 app.use((req, res) => {
     // Set 404
     res.status(404).render('404.twig');
 });
 
+// ---------------------------------------------------------------------------------------------------------------------
 // Start the server
+// ---------------------------------------------------------------------------------------------------------------------
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
