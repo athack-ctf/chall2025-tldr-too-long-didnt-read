@@ -18,12 +18,22 @@
 </header>
 
 <div class="content centered">
-    <h2>Oops! The page you're looking for could not be found.</h2>
-    <div class="error-message">404</div>
-    <p>It seems the page you're looking for doesn't exist or has been moved.</p>
-    <p>But don't worry! You can go back to TL.D forum.</p>
-    <a href="/"><button class="btn">Back to Forum</button></a>
+    {% if isLoggedIn == true %}
+        {#  *** FALG VALUE *** #}
+        <h2>You got it!</h2>
+        <code>ATHACKCTF{tldr_BCrypt_i$_limit3d_to_72_8yt3s}</code>
+        {#  *** FALG VALUE *** #}
+    {% else %}
+        <h2>Sorry, this is not for you!.</h2>
+        <div class="error-message">You gotta login first!</div>
+        <p>You have to log in to see the flag. It's only meant for TL.D staff members...</p>
+        <a href="/">
+            <button class="btn">Back to Forum</button>
+        </a>
+    {% endif %}
 </div>
-
 </body>
 </html>
+
+
+

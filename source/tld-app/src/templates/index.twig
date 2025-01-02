@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TL;D</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,18 +16,24 @@
     <h3>Too Long; Didn't [Reach]</h3>
 </header>
 <div class="content">
-    <div class="login-section">
-        <h3>Login to your TL;D Account</h3>
-        <div class="login-container">
-            <form class="login-form" action="/login" method="POST">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                <button type="submit" class="btn">Login</button>
-            </form>
+    {% if isLoggedIn == true %}
+        <h2><b>Logged in as:</b> {# TODO #}</h2>
+    {% else %}
+        <div class="top-section">
+            <h3>Login to your TL;D Account</h3>
+            <div class="top-container">
+                <form class="login-form" action="/login" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
         </div>
-    </div>
+    {% endif %}
+    <h2><b>Want to see something cool?</b></h2>
+    <a href="/flag">Click here to check the flag!</a>
     <h2><b>Forum</b> - Hot Threads🔥🧵</h2>
     <div class="forum">
         {% for thread in threads %}
@@ -40,6 +46,5 @@
         {% endfor %}
     </div>
 </div>
-
 </body>
 </html>

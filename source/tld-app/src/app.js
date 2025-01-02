@@ -17,11 +17,25 @@ nunjucks.configure(path.join(__dirname, 'templates'), {
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+const isLoggedIn = () => {
+    // TODO
+    return false;
+}
+
 // Routes
 app.get('/', (req, res) => {
     const threadsJson = path.join(__dirname, 'data/threads.json');
     const threads = JSON.parse(fs.readFileSync(threadsJson, 'utf8'));
-    res.render('index.twig', {threads: threads});
+    res.render('index.twig', {
+        isLoggedIn: isLoggedIn(),
+        threads: threads
+    });
+});
+
+app.get('/flag', (req, res) => {
+    res.render('flag.twig', {
+        isLoggedIn: isLoggedIn()
+    });
 });
 
 // 404 Not Found handler for all routes that don't match

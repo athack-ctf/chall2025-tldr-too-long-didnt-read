@@ -20,6 +20,10 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.centered {
+    text-align: center;
+}
+
 h2 {
     color: #333;
 }
@@ -40,14 +44,14 @@ h2 {
     border-left: 3px solid #333;
 }
 
-.login-section {
+.top-section {
     background-color: #eee;
     padding: 20px;
     margin-top: 20px;
     border: 1px solid #ccc;
 }
 
-.login-section h3 {
+.top-section h3 {
     margin-top: 0;
 }
 
@@ -71,7 +75,7 @@ input[type="text"], input[type="password"] {
     background-color: #555;
 }
 
-.login-container {
+.top-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,4 +84,10 @@ input[type="text"], input[type="password"] {
 .login-form {
     max-width: 400px;
     width: 100%;
+}
+
+.error-message {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
 }
