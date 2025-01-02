@@ -14,16 +14,26 @@
 
 <header>
     <h1>TL;D</h1>
-    <h3>Too Long; Didn't [Reach]</h3>
+    <h3>Too Long; Didn't Read.</h3>
 </header>
 
 <div class="content centered">
-    <h2>Oops! The page you're looking for could not be found.</h2>
-    <div class="error-message">404</div>
-    <p>It seems the page you're looking for doesn't exist or has been moved.</p>
-    <p>But don't worry! You can go back to TL.D forum.</p>
-    <a href="/"><button class="btn">Back to Forum</button></a>
+    {% if isLoggedIn == true %}
+        {#  *** FALG VALUE *** #}
+        <h2>You got it!</h2>
+        <code>ATHACKCTF{tldr_BCrypt_i$_limit3d_to_72_8yt3s}</code>
+        {#  *** FALG VALUE *** #}
+    {% else %}
+        <h2>Sorry, this is not for you!.</h2>
+        <div class="error-message">You gotta login first!</div>
+        <p>You will have to login. This data is only available to TL;DR. registered users.</p>
+        <a href="/">
+            <button class="btn">Back to Forum</button>
+        </a>
+    {% endif %}
 </div>
-
 </body>
 </html>
+
+
+

@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require("path");
 
 // Destination
-const credentialsJson = path.join(__dirname, '../src/data/credentials.json');
+const credentialsJson = path.join(__dirname, '../tldr-app/src/data/credentials.json');
 
 // Load accounts
 const accountsJson = path.join(__dirname, 'data/accounts.json');

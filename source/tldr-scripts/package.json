@@ -1,0 +1,13 @@
+{
+  "name": "tldr-scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "add-creds": "node add-credentials.js"
+  },
+  "author": "Anis",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
+}
