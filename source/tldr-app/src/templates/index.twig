@@ -47,7 +47,9 @@
             <h3>Thread: {{ thread.title }}</h3>
             {% for comment in thread.comments %}
                 <div class="post">
-                    <p><strong>{{ comment.username }} ({{ comment.role }})</strong>: {{ comment.text }}</p>
+                    <p>
+                        <strong>{{ comment.username }}<span class="badge bg-color-{{ comment.role }}">{{ comment.role }}</span></strong>: {{ comment.text }}
+                    </p>
                 </div>
             {% endfor %}
         {% endfor %}

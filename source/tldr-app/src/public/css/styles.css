@@ -91,3 +91,30 @@ input[type="text"], input[type="password"] {
     color: #e74c3c;
     margin-bottom: 20px;
 }
+
+.badge {
+    display: inline-block;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.bg-color-staff {
+    background-color: #007bff;
+}
+
+.bg-color-nobody {
+    background-color: black;
+}
+
+.bg-color-admin {
+    background-color: green;
+}
+
+.bg-color-dummy-user {
+    background-color: #1b1a40;
+}
