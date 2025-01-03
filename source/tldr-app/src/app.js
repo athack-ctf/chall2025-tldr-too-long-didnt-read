@@ -119,7 +119,7 @@ app.post('/api/login', async (req, res) => {
         return res.json({success: false, message: 'Login Failed: Username must be a non-empty string.'});
     }
 
-    if (username.length < 4) {
+    if (username.length < 5) {
         return res.json({success: false, message: 'Login Failed: This username is too short!'});
     }
 
@@ -127,7 +127,7 @@ app.post('/api/login', async (req, res) => {
         return res.json({success: false, message: 'Login Failed: Password must be a non-empty string.'});
     }
 
-    if (password.length < 12) {
+    if (password.length < 16) {
         return res.json({success: false, message: 'Login Failed: This password is too short!'});
     }
 

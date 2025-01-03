@@ -22,16 +22,16 @@
     {% if isLoggedIn == true %}
         {#  *** FALG VALUE *** #}
         <h2>You got it!</h2>
-        <code>ATHACKCTF{tldr_BCrypt_i$_limit3d_to_72_8yt3s}</code>
+        <p><code>ATHACKCTF{tldr_BCrypt_i$_limit3d_to_72_8yt3s}</code></p>
         {#  *** FALG VALUE *** #}
     {% else %}
         <h2>Sorry, this is not for you!.</h2>
         <div class="error-message">You gotta login first!</div>
         <p>You will have to login. This data is only available to TL;DR. registered users.</p>
-        <a href="/">
-            <button class="btn">Back to Forum</button>
-        </a>
     {% endif %}
+    <a href="/">
+        <button class="btn">Back to Forum</button>
+    </a>
 </div>
 </body>
 </html>
