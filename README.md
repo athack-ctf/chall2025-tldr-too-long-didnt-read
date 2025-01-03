@@ -7,7 +7,7 @@
 - [ ] **OFF**line
 - [X] **ON**line
 
-## Designer(s)
+## Designer
 
 - Anis
 
@@ -17,6 +17,6 @@ A challenge involving breaking an ad-hoc password hashing scheme to login as a v
 
 **IMPORTANT:** This description will **NOT** be shared with participants.
 
-## Category(ies)
+## Category
 
 - `web`
