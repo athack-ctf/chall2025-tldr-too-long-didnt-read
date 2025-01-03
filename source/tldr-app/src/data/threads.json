@@ -113,7 +113,7 @@
       },
       {
         "userIdx": 0,
-        "text": "Reminder to EVERYONE that in `TL;DR.` we do not tolerate bullying! I am keeping the first 2 comments on this thread for context purposes but will delete the dispute that followed."
+        "text": "Reminder to EVERYONE that in `TL;DR.` we do NOT tolerate slurs, specially not when used for bullying! I am keeping the first 2 comments on this thread for context purposes, but will delete the dispute that followed."
       },
       {
         "userIdx": 0,
@@ -121,15 +121,11 @@
       },
       {
         "userIdx": 5,
-        "text": "I am leaving TL;DR."
+        "text": "I am leaving TL;DR. That was too harsh :'("
       },
       {
-        "userIdx": 10,
+        "userIdx": 7,
         "text": "deleted by admin"
-      },
-      {
-        "userIdx": 0,
-        "text": "I am closing this thread."
       }
     ]
   },
@@ -146,7 +142,7 @@
       },
       {
         "userIdx": 13,
-        "text": "I have noticed that you were forcing users to have passwords longer than 16 characters, yet you only allow lower-case alphanumeric characters to be used in their passwords. If feels a bit inconsistent to me, and doesn't feel right..."
+        "text": "I have noticed that you were forcing users to have passwords longer than 16 characters, yet you only allow lower-case alphanumeric characters... Any reasons why you impose such restrictions?"
       },
       {
         "userIdx": 2,
@@ -154,7 +150,7 @@
       },
       {
         "userIdx": 0,
-        "text": "Sure thing, thanks for raising the concern btw. We had many of our users forget their passwords because they were using some weird characters that themself could not remember. So by requiring numbers and lowercase alphabet characters we are forcing/helping them pick a password they can remember. 1/n"
+        "text": "Sure thing. Thanks for raising the concern btw. Historically, we had many of our users forget their passwords because they were using way too many special characters that themself could not remember. Now, by limiting passwords to numbers and lowercase alphabet characters we are forcing/helping them pick something they can remember. 1/n"
       },
       {
         "userIdx": 0,
@@ -162,19 +158,19 @@
       },
       {
         "userIdx": 0,
-        "text": "Just to illustrate: with 16 characters you have 36^16 possible combinations of possible passwords. 3/n"
+        "text": "Just to illustrate: with 16 characters you have 36^16 combinations of possible passwords. 3/n"
       },
       {
         "userIdx": 0,
-        "text": "And since TL;DR. doesn't care about scalability, we have implemented a global lock around all our routes. In other words, TL;DR. only handles one request at a time, which forces whoever tried to brute-force an account to do it with one password at a time. 4/4"
+        "text": "And since TL;DR. doesn't care about scalability (yup, we don't), we have implemented a global lock around all our routes. In other words, TL;DR. only handles one request at a time, which forces whoever tries to brute-force an account to do it with one password at a time. 4/4"
       },
       {
         "userIdx": 13,
-        "text": "...do you also store password in the clear because it's... more convenient? LoL"
+        "text": "Let me guess, you also do store passwords in the clear because it's... more convenient? LoL"
       },
       {
         "userIdx": 3,
-        "text": "I can assure you that all our passwords are slated and hashed!!!"
+        "text": "Nope, I can assure you that all our passwords are slated and hashed!!!"
       },
       {
         "userIdx": 0,
@@ -189,11 +185,19 @@
         "text": "Instead of hashing the password only, we append it to the username and hash the result."
       },
       {
-        "userIdx": 5,
-        "text": "deleted by admin"
+        "userIdx": 13,
+        "text": "OK. Makes sense."
       },
       {
         "userIdx": 10,
+        "text": "Why don't you use ReactJS?"
+      },
+      {
+        "userIdx": 0,
+        "text": "I don't know how to use ReactJS. I am too old to learn it tbh..."
+      },
+      {
+        "userIdx": 5,
         "text": "deleted by admin"
       },
       {

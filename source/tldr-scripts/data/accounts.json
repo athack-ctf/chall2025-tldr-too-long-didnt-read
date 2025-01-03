@@ -47,17 +47,17 @@
   {
     "username": "guest1994",
     "password": "dc`r<x.tKe'->}8CMZqfu,",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "0123456789",
     "password": "CVuBN&M,b2}*8asZ?!:UHD",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "d0ts.........0nly.user",
     "password": "t32?*`<Yp6{:;bjDxPG!>H",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "x.0.0.x",
@@ -72,12 +72,12 @@
   {
     "username": "the.0ther.fake.admin",
     "password": "BVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "b00m.b00m",
     "password": "CVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "f0bus",
@@ -87,7 +87,7 @@
   {
     "username": "minmax",
     "password": "EFyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "left.or.write",
@@ -97,7 +97,7 @@
   {
     "username": "not.the.admin",
     "password": "XVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "trusted-user"
   },
   {
     "username": "this.i5.highly.likely.the.longe5t.u5ername.yet.regi5tered.0n.thi5.f0rum",
