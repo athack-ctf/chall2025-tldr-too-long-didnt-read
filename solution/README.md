@@ -1,10 +1,17 @@
-# How to Solve the Challenge?
+# How to solve TL;DR.?
 
-Provide reproducible steps to solve the challenge. This can include:
+## Solution
+Authenticate with:
+- **Username:** `broootheeer.meee.iii.duuupliiicaaateee.myyy.voooweeels.threee.tiiimeees`
+- **Password:** `kaaaaaaaaaaaaaaa`
 
-- Runnable code (e.g., `PoC.py`)
-- A Bash script or a sequence of commented commands
-- Well-explained instructions
-- ...
+## How to derive these credentials
+By analyzing the discussion in TL;DR.:
+- Passwords must be lowercase alphanumerics and at least 16 characters long.
+- The website hashes `username + password` using Bcrypt (instead of just the password).
+- Bcrypt hashes only the first 72 bytes of input.
+- The username has 71 characters, so only the first character of the password is hashed.
+- To access the account, you only need to guess the first valid password character (which is a `k`).
 
-Ensure that all dependencies required to build or run the solution are provided (e.g., `requirements.txt`) or thoroughly documented.
+## Real-world inspiration
+This challenge is based on the [Okta bcrypt Security Incident](https://www.nodejs-security.com/blog/okta-bcrypt-security-incident-bun-nodejs).
