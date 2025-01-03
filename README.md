@@ -1,4 +1,4 @@
-# Chall - TL;DR.
+# Chall - TL;DR. Too Long; Didn't Read.
 
 > A challenge involving breaking an ad-hoc password hashing scheme.
 
