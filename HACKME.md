@@ -1,10 +1,6 @@
-The description of your challenge as seen by participants in CTFd. Try to make it feel within the theme
-of the event...
+Beyond its uncivilized and often hostile discussions, TL;DR. (a forum notorious for its unsocial members) once hosted
+a valuable flag. Previously, anyone visiting TL;DR. could consult the flag. However, things have since changed.
+TL;DR. has abruptly ceased accepting new users and now restricts access to the flag to only those who are already registered.
 
----
-If your challenge is a multi-flag one (i.e., it consists of a sequence of sub-challenges each rewarded with
-its own flag), requiring a different description for each sub-challenge, then have your descriptions split as 
-done with this paragraph, and the next one.
-
----
-Obviously, for each sub-challenge, you should provide its flag value in [solution/FLAGS.md](solution/FLAGS.md).
+Now, what remains is a series of odd and isolated discussions among introverts. 
+But is there still any value to be found in them?
