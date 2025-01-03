@@ -1,14 +1,241 @@
 [
   {
-    "title": "The Technical Details Behind TL;DR.",
+    "title": "Where can ppl create new accounts on TL;DR. ?",
     "comments": [
       {
+        "userIdx": 6,
+        "text": "A frnd of mine wants to join TL;DR. but I can't seem to find the registration form. Is it closed?"
+      },
+      {
+        "userIdx": 2,
+        "text": "TL;DR. Yes, registrations are closed. Only previously registered users can login to their accounts. We might re-open registrations after @Hack2025 is over... We did that for security reasons."
+      }
+    ]
+  },
+  {
+    "title": "Why are users of TL;DR. so uncreative?",
+    "comments": [
+      {
+        "userIdx": 5,
+        "text": "I keep coming back to this website hoping to see some creativity, but always get so disappointed. Why are users of this forum so uncreative? I mean, just look at my username, `kernel.picnic`, it reflects how cool I am."
+      },
+      {
+        "userIdx": 7,
+        "text": "Bro, you good? Forgot your stay-humble pills? Everyone here (except u obv) is C00L. Just pay attention to some usernames and you'll realize how lame `kernel.picnic`is..."
+      },
+      {
+        "userIdx": 18,
+        "text": "Calling whoever reads this to say something nice to @kernel.picnic ;)"
+      },
+      {
+        "userIdx": 8,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 5,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 9,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 5,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 17,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 20,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 5,
+        "text": "deleted by admin"
+      },
+      {
         "userIdx": 0,
-        "text": "Can tech staff comment on how TL;DR. was built?"
+        "text": "Reminder to EVERYONE that in `TL;DR.` we do not tolerate bullying! I am keeping the first 2 comments on this thread for context purposes but will delete the dispute that followed."
+      },
+      {
+        "userIdx": 0,
+        "text": "@left.or.write this was not the RIGHT thing to do..."
+      },
+      {
+        "userIdx": 5,
+        "text": "I am leaving TL;DR."
+      },
+      {
+        "userIdx": 10,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 0,
+        "text": "I am closing this thread."
+      }
+    ]
+  },
+  {
+    "title": "TL;DR. Software Stack",
+    "comments": [
+      {
+        "userIdx": 13,
+        "text": "Can anyone form the staff comment on how TL;DR. is built?"
+      },
+      {
+        "userIdx": 2,
+        "text": "Hum, I did some of the backend dev work for TL;DR. We do use nodejs with a server side template engine, but nothing fancy for me to comment on..."
+      },
+      {
+        "userIdx": 13,
+        "text": "I have noticed that you were forcing users to have passwords longer than 16 characters, yet you only allow lower-case alphanumeric characters to be used in their passwords. If feels a bit inconsistent to me, and doesn't feel right..."
+      },
+      {
+        "userIdx": 2,
+        "text": "Yo @higgsploit, can you clarify?"
+      },
+      {
+        "userIdx": 0,
+        "text": "Sure thing, thanks for raising the concern btw. We had many of our users forget their passwords because they were using some weird characters that themself could not remember. So by requiring numbers and lowercase alphabet characters we are forcing/helping them pick a password they can remember. 1/n"
+      },
+      {
+        "userIdx": 0,
+        "text": "We also force them to pick a password that is sufficiently long (16 characters at least). 2/n"
+      },
+      {
+        "userIdx": 0,
+        "text": "Just to illustrate: with 16 characters you have 36^16 possible combinations of possible passwords. 3/n"
+      },
+      {
+        "userIdx": 0,
+        "text": "And since TL;DR. doesn't care about scalability, we have implemented a global lock around all our routes. In other words, TL;DR. only handles one request at a time, which forces whoever tried to brute-force an account to do it with one password at a time. 4/4"
+      },
+      {
+        "userIdx": 13,
+        "text": "...do you also store password in the clear because it's... more convenient? LoL"
+      },
+      {
+        "userIdx": 3,
+        "text": "I can assure you that all our passwords are slated and hashed!!!"
+      },
+      {
+        "userIdx": 0,
+        "text": "To elaborate on what @0xc0ffee mentioned, we do use Bcrypt with 10 rounds of salting, for all passwords with a little trick to make it even more complicated."
+      },
+      {
+        "userIdx": 19,
+        "text": "What trick?"
+      },
+      {
+        "userIdx": 0,
+        "text": "Instead of hashing the password only, we append it to the username and hash the result."
+      },
+      {
+        "userIdx": 5,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 10,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 0,
+        "text": "I am closing this thread."
+      }
+    ]
+  },
+  {
+    "title": "Who is the admin or admins of TL;DR. ?",
+    "comments": [
+      {
+        "userIdx": 15,
+        "text": "Who is the admin here?"
+      },
+      {
+        "userIdx": 0,
+        "text": "I am the admin here. Calling @staff members to show up."
       },
       {
         "userIdx": 1,
-        "text": "TL;D was built using a modern tech stack including React for the frontend, Node.js for the backend, and MongoDB for data storage. We focused on scalability and performance."
+        "text": "I am admin too :))"
+      },
+      {
+        "userIdx": 2,
+        "text": "I am admin three :p"
+      },
+      {
+        "userIdx": 3,
+        "text": "I am NOT NOT admin xD."
+      },
+      {
+        "userIdx": 4,
+        "text": "What's going on?"
+      },
+      {
+        "userIdx": 5,
+        "text": "LoL"
+      },
+      {
+        "userIdx": 6,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 7,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 8,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 9,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 10,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 11,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 12,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 13,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 14,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 15,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 16,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 17,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 18,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 19,
+        "text": "deleted by admin"
+      },
+      {
+        "userIdx": 0,
+        "text": "I am freezing this thread."
       }
     ]
   }

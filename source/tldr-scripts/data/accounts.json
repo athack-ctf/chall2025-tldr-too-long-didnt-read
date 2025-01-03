@@ -1,92 +1,7 @@
 [
   {
-    "username": "this.i5.highly.likely.the.longe5t.u5ername.yet.regi5tered.0n.thi5.f0rum",
-    "password": "cb-j[3Gn?.TtRJHa~4C=/%",
-    "role": "staff"
-  },
-  {
-    "username": "follow.me.plz",
-    "password": "wy{khJ=6.7cZm_3:$\"LQvt",
-    "role": "staff"
-  },
-  {
     "username": "higgsloit",
     "password": "DfM{W]AE'7J-sHR8PewC?5",
-    "role": "staff"
-  },
-  {
-    "username": "rage.against.the.virtual.machine",
-    "password": "hWgrjP(yqGnaM6^dw!3/_m",
-    "role": "staff"
-  },
-  {
-    "username": "brave.new.word",
-    "password": "k%RhFb7J^eS)X{'xwN5v8(\"",
-    "role": "staff"
-  },
-  {
-    "username": "guest1994",
-    "password": "dc`r<x.tKe'->}8CMZqfu,",
-    "role": "staff"
-  },
-  {
-    "username": "0123456789",
-    "password": "CVuBN&M,b2}*8asZ?!:UHD",
-    "role": "staff"
-  },
-  {
-    "username": "admin1",
-    "password": "s(wD.F)Wn5H^}>KtN`['f/",
-    "role": "staff"
-  },
-  {
-    "username": "admin2",
-    "password": "e;H5K/FPRB9W7%<[Z3\"c8@",
-    "role": "staff"
-  },
-  {
-    "username": "admin3",
-    "password": "GCKNAP'!dEV7`^=jJDWsp}\"",
-    "role": "staff"
-  },
-  {
-    "username": "d0ts.........0nly.user",
-    "password": "t32?*`<Yp6{:;bjDxPG!>H",
-    "role": "staff"
-  },
-  {
-    "username": "x.0.0.x",
-    "password": "LVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "fake.admin",
-    "password": "AVyRj^`Y<(6g4!MX>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "the.0ther.fake.admin",
-    "password": "BVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "b00m.b00m",
-    "password": "CVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "n0body",
-    "password": "DVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "minmax",
-    "password": "EFyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
-  },
-  {
-    "username": "kernel.picnic",
-    "password": "15yRj^`Y<(6g4!Mn>H98'w",
     "role": "staff"
   },
   {
@@ -95,13 +10,98 @@
     "role": "staff"
   },
   {
+    "username": "maaaster.miiind",
+    "password": "s(wD.F)Wn5H^}>KtN`['f/",
+    "role": "staff"
+  },
+  {
+    "username": "0xc0ffee",
+    "password": "e;H5K/FPRB9W7%<[Z3\"c8@",
+    "role": "staff"
+  },
+  {
+    "username": "r00t",
+    "password": "GCKNAP'!dEV7`^=jJDWsp}\"",
+    "role": "staff"
+  },
+  {
+    "username": "kernel.picnic",
+    "password": "15yRj^`Y<(6g4!Mn>H98'w",
+    "role": "nobody"
+  },
+  {
+    "username": "follow.me.plz",
+    "password": "wy{khJ=6.7cZm_3:$\"LQvt",
+    "role": "nobody"
+  },
+  {
+    "username": "rage.against.the.virtual.machine",
+    "password": "hWgrjP(yqGnaM6^dw!3/_m",
+    "role": "nobody"
+  },
+  {
+    "username": "brave.new.word",
+    "password": "k%RhFb7J^eS)X{'xwN5v8(\"",
+    "role": "nobody"
+  },
+  {
+    "username": "guest1994",
+    "password": "dc`r<x.tKe'->}8CMZqfu,",
+    "role": "dummy-user"
+  },
+  {
+    "username": "0123456789",
+    "password": "CVuBN&M,b2}*8asZ?!:UHD",
+    "role": "dummy-user"
+  },
+  {
+    "username": "d0ts.........0nly.user",
+    "password": "t32?*`<Yp6{:;bjDxPG!>H",
+    "role": "dummy-user"
+  },
+  {
+    "username": "x.0.0.x",
+    "password": "LVyRj^`Y<(6g4!Mn>H98'w",
+    "role": "nobody"
+  },
+  {
+    "username": "fake.admin",
+    "password": "AVyRj^`Y<(6g4!MX>H98'w",
+    "role": "nobody"
+  },
+  {
+    "username": "the.0ther.fake.admin",
+    "password": "BVyRj^`Y<(6g4!Mn>H98'w",
+    "role": "dummy-user"
+  },
+  {
+    "username": "b00m.b00m",
+    "password": "CVyRj^`Y<(6g4!Mn>H98'w",
+    "role": "dummy-user"
+  },
+  {
+    "username": "f0bus",
+    "password": "DVyRj^`Y<(6g4!Mn>H98'w",
+    "role": "nobody"
+  },
+  {
+    "username": "minmax",
+    "password": "EFyRj^`Y<(6g4!Mn>H98'w",
+    "role": "dummy-user"
+  },
+  {
     "username": "left.or.write",
     "password": "AVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "nobody"
   },
   {
     "username": "not.the.admin",
     "password": "XVyRj^`Y<(6g4!Mn>H98'w",
-    "role": "staff"
+    "role": "dummy-user"
+  },
+  {
+    "username": "this.i5.highly.likely.the.longe5t.u5ername.yet.regi5tered.0n.thi5.f0rum",
+    "password": "cb-j[3Gn?.TtRJHa~4C=/%",
+    "role": "nobody"
   }
 ]
