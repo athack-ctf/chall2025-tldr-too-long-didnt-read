@@ -49,7 +49,7 @@
             {% for comment in thread.comments %}
                 <div class="post">
                     <p>
-                        <strong>{{ comment.username }}<span class="badge bg-color-{{ comment.role }}">{{ comment.role }}</span></strong>: {{ comment.text }}
+                        <strong>{{ comment.username }}<span class="badge bg-color-{{ comment.role }}">{{ comment.role }}</span></strong>: {{ comment.text | linkify | safe }}
                     </p>
                 </div>
             {% endfor %}

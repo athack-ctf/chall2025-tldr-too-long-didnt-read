@@ -17,11 +17,19 @@ const port = 2025;
 // Configure Nunjucks
 // ---------------------------------------------------------------------------------------------------------------------
 
-nunjucks.configure(path.join(__dirname, 'templates'), {
+const env = nunjucks.configure(path.join(__dirname, 'templates'), {
     autoescape: true,
     express: app,
     // Watch files for changes (useful for development)
     watch: true,
+});
+
+// Add a custom filter to the Nunjucks environment
+env.addFilter('linkify', function (text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, (url) => {
+        return `<a href="${url}" target="_blank">${url}</a>`;
+    });
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
