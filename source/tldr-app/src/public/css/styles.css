@@ -103,18 +103,14 @@ input[type="text"], input[type="password"] {
     text-align: center;
 }
 
-.bg-color-staff {
+.bg-color-admin {
     background-color: #007bff;
 }
 
 .bg-color-nobody {
-    background-color: black;
-}
-
-.bg-color-admin {
-    background-color: green;
-}
-
-.bg-color-dummy-user {
     background-color: #1b1a40;
+}
+
+.bg-color-staff {
+    background-color: green;
 }
