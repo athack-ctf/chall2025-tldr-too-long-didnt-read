@@ -14,4 +14,4 @@ By analyzing the discussion in TL;DR.:
 - To access the account, you only need to guess the first valid password character (which is a `k`).
 
 ## Real-world inspiration
-This challenge is based on the [Okta bcrypt Security Incident](https://www.nodejs-security.com/blog/okta-bcrypt-security-incident-bun-nodejs).
+This challenge took inspirations from the [Okta bcrypt Security Incident](https://www.nodejs-security.com/blog/okta-bcrypt-security-incident-bun-nodejs).
