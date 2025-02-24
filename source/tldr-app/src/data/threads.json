@@ -21,11 +21,11 @@
       },
       {
         "userIdx": 7,
-        "text": "Bro, you good? Forgot your stay-humble pills? Everyone here (except u obvsly) is chill and pay-the-bill. Just pay attention to some usernames and you'll realize how lame `kernel.picnic` is..."
+        "text": "Bro, you good? Forgot your stay-humble pills? Everyone here (except u obvsly) is chill and pay-the-bill. Just look around and you'll soon realize how lame `kernel.picnic` is..."
       },
       {
         "userIdx": 18,
-        "text": "Calling whoever reads this to say something nice to @kernel.picnic... By nice, I mean something really really noise ;)"
+        "text": "Calling @everyone to say something nice to @kernel.picnic... By nice, I mean something really really noise ;)"
       },
       {
         "userIdx": 8,
@@ -117,7 +117,7 @@
       },
       {
         "userIdx": 0,
-        "text": "@left.or.write this was not the RIGHT thing to do..."
+        "text": "@left.0r.write this was not the RIGHT thing to do..."
       },
       {
         "userIdx": 5,
@@ -162,7 +162,7 @@
       },
       {
         "userIdx": 0,
-        "text": "And since TL;DR. doesn't care about scalability (yup, we don't), we have implemented a global lock around all our routes. In other words, TL;DR. only handles one request at a time, which forces whoever tries to brute-force an account to do it with one password at a time. 4/4"
+        "text": "And since TL;DR. doesn't care about scalability (yup, we don't), we have implemented a lock around our login route. In other words, TL;DR. only handles one login request at a time, which forces whoever tries to brute-force an account to do it with one attempt at a time. 4/4"
       },
       {
         "userIdx": 13,
@@ -170,11 +170,11 @@
       },
       {
         "userIdx": 3,
-        "text": "Nope, I can assure you that all our passwords are slated and hashed!!!"
+        "text": "Nope, I can assure you that all our passwords are properly store: salted and hashed!!!"
       },
       {
         "userIdx": 0,
-        "text": "To elaborate on what @0xc0ffee mentioned, we do use Bcrypt with 10 rounds of salting, for all passwords with a little trick to make it even more complicated."
+        "text": "To elaborate on what @idrink0xc0ffee mentioned, we do use Bcrypt with 10 rounds of salting, for all passwords with a little trick to make it even more complicated."
       },
       {
         "userIdx": 19,
@@ -186,11 +186,7 @@
       },
       {
         "userIdx": 13,
-        "text": "OK. Makes sense."
-      },
-      {
-        "userIdx": 10,
-        "text": "Why don't you use ReactJS?"
+        "text": "OK. Makes sense. Why don't you use ReactJS?"
       },
       {
         "userIdx": 0,
@@ -199,10 +195,6 @@
       {
         "userIdx": 5,
         "text": "deleted by admin."
-      },
-      {
-        "userIdx": 0,
-        "text": "I am closing this thread."
       }
     ]
   },
@@ -231,7 +223,7 @@
       },
       {
         "userIdx": 4,
-        "text": "What's going on? (Lame joke btw @0xc0ffee)"
+        "text": "What's going on? (Lame joke btw @idrink0xc0ffee)"
       },
       {
         "userIdx": 5,
@@ -264,7 +256,7 @@
     ]
   },
   {
-    "title": "Anyone going to @HackCTF 2025",
+    "title": "Is anyone here going to @HackCTF 2025???",
     "comments": [
       {
         "userIdx": 18,
@@ -287,8 +279,12 @@
         "text": "Instagram: https://www.instagram.com/athackctf/"
       },
       {
+        "userIdx": 19,
+        "text": "CTF? Hackathon? Wth? LMAO"
+      },
+      {
         "userIdx": 0,
-        "text": "Event promotions are not welcome here. I am freezing this thread."
+        "text": "Event promotions are NOT welcome here. I am freezing this thread."
       }
     ]
   }

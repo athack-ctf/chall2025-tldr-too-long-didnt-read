@@ -120,6 +120,14 @@ app.get('/flag', (req, res) => {
 });
 
 app.post('/api/login', async (req, res) => {
+
+    const sleep = (ms) => {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // Preventing dumb brute forcing attacks
+    await sleep(5000);
+
     const {username, password} = req.body;
 
     // Validate that username and password are non-empty strings
@@ -142,6 +150,12 @@ app.post('/api/login', async (req, res) => {
     // Find the user by username
     const user = getAllCredentials().find(user => user.username === username);
 
+    const invalidLoginMsg = 'Login Failed: Invalid username or password.';
+
+    if (user === undefined) {
+        return res.json({success: false, message: invalidLoginMsg});
+    }
+
     // Constructing username with password
     const usernameWithPassword = `${user.username}${password}`;
 
@@ -152,7 +166,7 @@ app.post('/api/login', async (req, res) => {
         return res.json({success: true, message: 'Login successful!'});
     }
 
-    return res.json({success: false, message: 'Login Failed: Invalid credentials.'});
+    return res.json({success: false, message: invalidLoginMsg});
 });
 
 app.post('/api/logout', (req, res) => {
