@@ -1,4 +1,4 @@
-# TL;DR. chall
+# Running This Challenge
 
 - This chall consists of a node express app implemented in [./tldr-app](./tldr-app).
 - The script [tldr-scripts/add-credentials.js](./tldr-scripts/add-credentials.js)
@@ -6,8 +6,19 @@
   form [tldr-scripts/data/accounts.json](./tldr-scripts/data/accounts.json). Make sure to run it if accounts.json is
   changed.
 
-## Run [tldr-app](./tldr-app/) using docker-compose
+## Run [tldr-app](./tldr-app/) using docker
 
+Build
 ```
-docker compose up --build
+docker build -t athack-ctf/chall2025-tldr-too-long-didnt-read:latest .
+```
+
+Run
+```
+docker run -d --name tldr-too-long-didnt-read \
+  -p 52048:2025 \
+  --memory 300m \
+  --cpus 0.12 \
+  athack-ctf/chall2025-tldr-too-long-didnt-read:latest
+
 ```
