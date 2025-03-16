@@ -1,11 +1,11 @@
 services:
   tldr-too-long-didnt-read:
     build: .
-    image: athack-ctf/chall2025-tldr-too-long-didnt-read:latest
-    ports:
-      - "2025:2025"
     deploy:
       resources:
         limits:
-          cpus: "0.12"
-          memory: "300m"
+          cpus: '0.12'
+          memory: 300m
+    image: athack-ctf/chall2025-tldr-too-long-didnt-read:latest
+    ports:
+    - 52048:2025
