@@ -160,7 +160,7 @@ app.post('/api/login', async (req, res) => {
     const usernameWithPassword = `${user.username}${password}`;
 
     // Check if credentials are valid
-    if (!user || (await bcrypt.compare(usernameWithPassword, user.password))) {
+    if (await bcrypt.compare(usernameWithPassword, user.password)) {
         // Store session data
         req.session.user = {username: username};
         return res.json({success: true, message: 'Login successful!'});
